@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baza wiedzy - Natali&WebStudio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Akordeon */
+.accordion {
+    background-color: #f7d794; /* różowo-pudrowy kolor */
+    color: #2c3e3b;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    border-radius:8px;
+}
+
+.accordion:hover {
+    background-color: #f4c9a0;
+}
+
+.panel {
+    padding: 0 20px;
+    display: none;
+    background-color: #fff;
+    overflow: hidden;
+    border-left: 2px solid #f7d794;
+    border-right: 2px solid #f7d794;
+    border-bottom: 2px solid #f7d794;
+    margin-bottom: 10px;
+    border-radius:0 0 8px 8px;
+}
+</style>
+</head>
+<body>
+
+<header>Natali<span>&</span>WebStudio</header>
+
+<nav>
+<a href="index.html">Strona główna</a>
+<a href="about.html">O mnie</a>
+<a href="offer.html">Oferta</a>
+<a href="realizacje.html">Realizacje</a>
+<a href="wiedza.html">Baza wiedzy</a>
+<a href="contact.html">Kontakt</a>
+</nav>
+
+<section>
+<h1>Baza wiedzy</h1>
+<p>W tym dziale dzielę się praktycznymi poradami i wiedzą o tworzeniu stron internetowych, SEO i projektowaniu przyjaznym dla użytkownika.</p>
+
+<!-- Akordeony -->
+<button class="accordion">Jak stworzyć estetyczną stronę wizytówkę?</button>
+<div class="panel">
+<ul>
+<li>Używaj ograniczonej palety kolorów (2–3 główne kolory)</li>
+<li>Zamieść tylko najważniejsze informacje o firmie lub osobie</li>
+<li>Dbaj o czytelne czcionki i kontrasty</li>
+<li>Umieść przyciski lub linki do kontaktu w widocznym miejscu</li>
+<li>Zachowaj spójność grafiki i układu na wszystkich podstronach</li>
+</ul>
+</div>
+
+<button class="accordion">Dlaczego responsywność jest ważna?</button>
+<div class="panel">
+<ul>
+<li>Większość użytkowników korzysta dziś ze smartfonów</li>
+<li>Google premiuje strony responsywne w wynikach wyszukiwania</li>
+<li>Poprawia komfort użytkownika i zwiększa konwersję</li>
+<li>Unikamy problemów z wyświetlaniem treści na małych ekranach</li>
+</ul>
+</div>
+
+<button class="accordion">Podstawy SEO dla małych firm</button>
+<div class="panel">
+<ul>
+<li>Używaj odpowiednich słów kluczowych w treści i nagłówkach</li>
+<li>Dodawaj meta title i description dla każdej strony</li>
+<li>Optymalizuj obrazy pod względem rozmiaru i alt tekstu</li>
+<li>Twórz treści wartościowe i unikalne</li>
+<li>Dbałość o szybkie ładowanie strony</li>
+</ul>
+</div>
+
+<button class="accordion">Jak przygotować zdjęcia i grafiki na stronę?</button>
+<div class="panel">
+<ul>
+<li>Używaj formatów JPG lub PNG dla zdjęć, SVG dla ikon</li>
+<li>Kompresuj obrazy przed wstawieniem na stronę (np. TinyPNG)</li>
+<li>Zadbaj o proporcje i przycinanie zdjęć</li>
+<li>Dodawaj alt teksty opisujące obrazek dla SEO i dostępności</li>
+<li>Stosuj jednolity styl grafik (filtr, paleta kolorów)</li>
+</ul>
+</div>
+
+</section>
+
+<footer>© 2026 Natali&WebStudio</footer>
+
+<script>
+// Skrypt do akordeonów
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach(acc => {
+    acc.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if(panel.style.display === "block"){
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
